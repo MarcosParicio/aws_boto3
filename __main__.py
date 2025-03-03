@@ -177,13 +177,13 @@ def receive_messages_from_sqs(queue_name, max_messages):
 if __name__ == "__main__":
     list_ec2_instances()
     
-    bucket_name = 'mi-bucket-creado-desde-python-112135376'
+    bucket_name = 'mi-bucket-creado-desde-python-con-boto3'
     create_bucket(bucket_name=bucket_name)
     
     list_buckets()
     
-    file_path = 'data/subir_al_bucket.txt'
-    object_name = 'carpeta_subida_desde_vscode/subir_al_bucket.txt'
+    file_path = 'data/subir_al_bucket_con_boto3.txt'
+    object_name = 'carpeta_subida_desde_vscode_con_boto3/subir_al_bucket_con_boto3.txt'
     upload_file_to_bucket(bucket_name, file_path, object_name)
     
     # no dejaba crear el cluster DocumentDB en eu-north-1, por lo que tuve que crearlo en eu-west-3 y cambiar en .env: AWS_DEFAULT_REGION='eu-west-3'
